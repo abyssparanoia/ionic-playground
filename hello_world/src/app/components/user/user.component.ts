@@ -15,6 +15,6 @@ export class UserComponent implements OnInit {
   ngOnInit() {}
 
   onNice() {
-    this.user.profile += '(((ο(*ﾟ▽ﾟ*)ο)))'
+    this.user.isNice = !this.user.isNice
   }
 }

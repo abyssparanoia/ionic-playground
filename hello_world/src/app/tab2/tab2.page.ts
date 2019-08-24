@@ -9,5 +9,5 @@ import { User } from '../models/user'
 export class Tab2Page {
   constructor() {}
 
-  user = new User('DUMMY_USER_ID', '山田太郎', 'テストだよ')
+  user = new User('DUMMY_USER_ID', '山田太郎', 'テストだよ', false)
 }
