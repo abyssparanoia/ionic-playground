@@ -13,4 +13,8 @@ export class UserComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  onNice() {
+    this.user.profile += '(((ο(*ﾟ▽ﾟ*)ο)))'
+  }
 }
