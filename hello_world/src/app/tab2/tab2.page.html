@@ -7,5 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <app-user [user]="user"></app-user>
+  <ng-container *ngFor="let user of users">
+    <app-user [user]="user"></app-user>
+  </ng-container>
 </ion-content>

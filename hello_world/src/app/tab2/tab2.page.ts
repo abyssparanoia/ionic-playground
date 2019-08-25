@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { User } from '../models/user'
+import { UserService } from '../services/user.service'
 
 @Component({
   selector: 'app-tab2',
@@ -7,7 +8,13 @@ import { User } from '../models/user'
   styleUrls: ['tab2.page.scss'],
 })
 export class Tab2Page {
-  constructor() {}
+  users: User[]
+
+  constructor(private userService: UserService) {}
 
   user = new User('DUMMY_USER_ID', 'yamada', 'テストだよ', false)
+
+  ngOnInit() {
+    this.users = this.userService.getUsers()
+  }
 }
