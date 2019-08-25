@@ -2,7 +2,7 @@
   <p>
     user works! name:
   </p>
-  <p [appHighlight]="user.isNice">name: {{ user.name }}</p>
+  <p [appHighlight]="user.isNice">name: {{ user.name | upper }}</p>
   <p>profile: {{ user.profile }}</p>
   <ion-button (click)="onNice()">いいね！</ion-button>
   <span *ngIf="user.isNice">(((ο(*ﾟ▽ﾟ*)ο)))</span>
