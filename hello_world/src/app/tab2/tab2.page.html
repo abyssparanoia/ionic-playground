@@ -6,8 +6,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ng-container *ngFor="let user of users">
-    <app-user [user]="user"></app-user>
-  </ng-container>
+<!-- <ion-content> -->
+<!-- <ng-container *ngFor="let user of users"> -->
+<!-- <ng-container *ngFor="let user of users" routerLink="/tabs/tab2/users/DUMMY_USER_ID1" routerDirection="forward"> -->
+<!-- <app-user [user]="user"></app-user> -->
+<!-- </ng-container> -->
+<!-- </ion-content> -->
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let user of users" routerLink="/tabs/tab2/users/DUMMY_USER_ID1" routerDirection="forward">
+      <ion-label [appHighlight]="user.isNice">
+        {{ user.name | upper }} is {{ user.profile }}
+        <span *ngIf="user.isNice">(((ο(*ﾟ▽ﾟ*)ο)))</span>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

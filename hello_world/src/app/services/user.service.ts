@@ -16,4 +16,8 @@ export class UserService {
   getUsers(): User[] {
     return this.users
   }
+
+  getUser(id: string): User {
+    return this.users.find(user => user.id === id)
+  }
 }

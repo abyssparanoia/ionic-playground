@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>user-detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-user [user]="user"></app-user>
+  <ion-item>
+    <ion-label>名前</ion-label>
+    <ion-input [(ngModel)]="user.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>プロフィール</ion-label>
+    <ion-input [(ngModel)]="user.profile"></ion-input>
+  </ion-item>
+</ion-content>
